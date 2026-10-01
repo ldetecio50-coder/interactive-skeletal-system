@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #eeeeee;
+    color: #161616;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.slide {
+    width: min(1200px, 96%);
+    margin: 22px auto;
+    background: #ffffff;
+    border: 1px solid #cfcfcf;
+    min-height: 700px;
+    padding: 28px 34px 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    border-bottom: 3px solid #111111;
+    padding-bottom: 16px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(25px, 3.5vw, 40px);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    margin: 7px 0 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+.student {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.5;
+    min-width: 210px;
+}
+
+.student strong {
+    display: block;
+    font-size: 14px;
+}
+
+.student span {
+    color: #666666;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 25px;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.skeleton-area {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.skeleton-area img {
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    display: block;
+}
+
+.hotspot {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: #d71936;
+    cursor: pointer;
+    box-shadow: 0 0 0 3px rgba(215, 25, 54, .18);
+}
+
+.hotspot:hover,
+.hotspot.active {
+    background: #ffffff;
+    border-color: #d71936;
+    box-shadow: 0 0 0 5px rgba(215, 25, 54, .2);
+}
+
+.information {
+    border-left: 2px solid #222222;
+    padding: 20px 0 20px 24px;
+}
+
+.label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #777777;
+    font-weight: bold;
+}
+
+.information h2 {
+    font-size: 30px;
+    margin: 8px 0 12px;
+}
+
+.information p {
+    line-height: 1.6;
+    color: #333333;
+    margin: 0 0 20px;
+}
+
+.instruction {
+    border-top: 1px solid #cccccc;
+    padding-top: 14px;
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.parts {
+    border-top: 1px solid #cccccc;
+    padding-top: 14px;
+}
+
+.parts-title {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+#partButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.part-button {
+    border: 1px solid #bdbdbd;
+    background: #ffffff;
+    color: #222222;
+    border-radius: 3px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.part-button:hover,
+.part-button.active {
+    background: #222222;
+    color: #ffffff;
+    border-color: #222222;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    color: #777777;
+    font-size: 10px;
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: 1px solid #dddddd;
+}
+
+@media (max-width: 800px) {
+    .slide {
+        width: 100%;
+        margin: 0;
+        padding: 18px;
+        border: 0;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .student {
+        text-align: left;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .information {
+        border-left: 0;
+        border-top: 2px solid #222222;
+        padding: 15px 0 0;
+    }
+
+    .skeleton-area {
+        min-height: 400px;
+    }
+}
